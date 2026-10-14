@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy 21st Birthday, Lololy</title>
+<!-- Fonts load from Google Fonts when online; elegant serif fallbacks are used offline. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+<canvas id="sparks" aria-hidden="true"></canvas>
+
+<!-- 2. OPENING LETTER -->
+<div id="intro" role="dialog" aria-label="Invitation">
+  <button id="skip" class="link">Skip Intro</button>
+  <p id="intro-line">An Extraordinary Invitation Awaits...</p>
+  <div id="envelope">
+    <div class="paper" id="invite">
+      <p><em>To Miss Lololy,</em></p>
+      <p>You are cordially invited to celebrate a rather extraordinary occasion.</p>
+      <p>On this day, you turn 21 — a new chapter, a little more magic, and countless adventures yet to unfold.</p>
+      <p>May your next chapter be filled with wonder, courage, laughter, and a little bit of magic.</p>
+      <p>With the warmest wishes,<br><em>The Birthday Magic Department</em></p>
+    </div>
+    <div class="flap"></div><div class="seal" aria-hidden="true">L</div>
+  </div>
+  <button id="open" class="btn">Open Your Birthday Letter</button>
+</div>
+
+<button id="music" class="music" aria-pressed="false" aria-label="Toggle music">♪ Music On</button>
+
+<main>
+<!-- 3. HERO -->
+<section id="hero">
+  <div class="moon" aria-hidden="true"></div>
+  <svg class="castle" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path d="M0 300V230h60v-40l15-40 15 40v40h50v-90l20-60 20 60v90h60v-30h40v-110l22-70 22 70v110h50v-60h70v-80l18-50 18 50v80h100v-40h60v-130l26-80 26 80v130h60v50h60v-100l16-50 16 50v100h70v-70h60v-70l14-40 14 40v70h50v50h70v-100l20-60 20 60v100h60V300z"/>
+  </svg>
+  <div class="candles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="hero-in">
+    <div class="n21" aria-hidden="true">21</div>
+    <h1>Happy 21st Birthday, Lololy!</h1>
+    <p class="lead">Twenty-one years of magic, and your greatest adventures are still ahead.</p>
+    <div class="row">
+      <a class="btn" href="#letter">Enter the Magic</a>
+      <a class="btn ghost" href="#video">A Little Birthday Surprise</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. ACCEPTANCE LETTER -->
+<section id="letter">
+  <article class="parchment">
+    <h2>An Official Notice from Hogwarts</h2>
+    <p><em>Dear Lololy,</em></p>
+    <p>It gives us great pleasure to inform you that you have officially entered your twenty-first year.</p>
+    <p>Your extraordinary journey continues beyond these enchanted halls. May you always find courage when the path seems uncertain, loyal friends when you need them most, and a little magic in the ordinary moments of life.</p>
+    <p>Remember, the most remarkable magic is often found in the people we love, the memories we make, and the dreams we dare to follow.</p>
+    <p>Your next chapter awaits.</p>
+    <p>With magic and warmest wishes,<br><em>Your Very Own Birthday Wizard</em></p>
+    <div class="seal big" aria-hidden="true">21</div>
+  </article>
+</section>
+
+<!-- 5. VIDEO — the centerpiece -->
+<section id="video">
+  <h2>Your Little Piece of Magic</h2>
+  <p class="lead">Some wishes are too special to fit inside a letter...</p>
+  <div id="book-wrap">
+    <button id="reveal" class="book" aria-label="Reveal Your Surprise">
+      <span class="cover"></span><span class="pages"></span>
+    </button>
+    <button id="reveal2" class="btn">Reveal Your Surprise</button>
+  </div>
+  <figure id="player" hidden>
+    <div class="frame">
+      <!-- ▼ REPLACE THE VIDEO: put your MP4 at assets/lololy-birthday.mp4 (keep the name, or edit src below).
+           Optional poster image: assets/poster.jpg -->
+      <video id="vid" controls playsinline preload="metadata" src="assets/lololy-birthday.mp4"></video>
+      <p id="vid-missing" hidden>Your video is still being conjured. Add <code>assets/lololy-birthday.mp4</code> and it will appear here.</p>
+    </div>
+    <figcaption>Made with a little magic, just for you, Lololy.</figcaption>
+  </figure>
+</section>
+
+<!-- 6. WISHES -->
+<section id="wishes">
+  <h2>Twenty-One Little Wishes</h2>
+  <p class="lead">Tap a card to unfold a wish.</p>
+  <div id="grid"></div>
+</section>
+
+<!-- 7. MAP -->
+<section id="map">
+  <h2>Every Great Story Has Its Moments</h2>
+  <p class="lead">I solemnly swear that this is a journey worth taking.</p>
+  <ol class="path">
+    <li><b>The Beginning of a Beautiful Story</b></li>
+    <li><b>A Thousand Little Adventures</b></li>
+    <li><b>Memories Worth Keeping</b></li>
+    <li><b>The Magic of the Present</b></li>
+    <li><b>The Adventures Yet to Come</b></li>
+  </ol>
+  <!-- Future photos: add <img src="assets/photo1.jpg" alt="..."> inside any <li> above. -->
+</section>
+
+<!-- 8. FINALE -->
+<section id="finale">
+  <svg class="towers" viewBox="0 0 1200 200" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path d="M0 200V120h80V60l20-50 20 50v60h100V80l16-40 16 40v40h120V50l22-50 22 50v70h140V90l18-45 18 45v30h160V40l24-40 24 40v80h130V70l16-40 16 40v50h110V100h80V200z"/>
+  </svg>
+  <h2>Cheers to 21 Years of Magic!</h2>
+  <p>May your life be filled with extraordinary adventures, beautiful memories, people who make you feel at home, and dreams that turn into reality.</p>
+  <p>The world is a little more magical because you're in it.</p>
+  <p><strong>Happy Birthday, Lololy. Your next chapter starts now.</strong></p>
+    <p><strong>I Love You Sooooooooo Much Lololy.</strong></p>
+  <button id="wish" class="btn big">Make a Birthday Wish</button>
+  <p id="wish-msg" role="status" aria-live="polite"></p>
+  <!-- ▼ EDIT YOUR SIGNATURE HERE -->
+  <p class="sig">With love, a little magic, and the warmest birthday wishes.</p>
+</section>
+</main>
+
+<!-- OPTIONAL MUSIC: add your own royalty-free instrumental at assets/music.mp3 (do not use film soundtrack recordings). -->
+<audio id="bgm" src="assets/music.mp3" loop preload="auto"></audio>
+<script src="script.js"></script>
+</body>
+</html>
